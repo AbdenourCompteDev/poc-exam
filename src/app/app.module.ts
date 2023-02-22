@@ -5,6 +5,7 @@ import { HomeComponent } from './admin/home/home.component';
 import { NewaccountComponent } from './admin/newaccount/newaccount.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,9 +16,11 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

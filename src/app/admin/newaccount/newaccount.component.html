@@ -1,43 +1,37 @@
   <div class="d-flex align-items-center justify-content-center" style="margin-top:50px;">
-
-    <form #form="ngForm" ngNativeValidate>
-
-
+    <form #formSubscription="ngForm" ngNativeValidate (ngSubmit)="onSubmit(formSubscription)">
     <div class="row">
         <div class="col-sm">
           <label for="email" class="form-label">email</label>
-          <input type="email" name="emaill" class="form-control" id="email" aria-describedby="emailHelp" [(ngModel)]="orignalPersonUser.email" >
+          <input type="email" name="emaill" class="form-control" id="email" aria-describedby="emailHelp" [(ngModel)]="personUser.email" >
         </div>
         <div class="col-sm">
           <label for="firstname" class="form-label">first name</label>
-          <input name="firstname" class="form-control" id="firstname"  [(ngModel)]="orignalPersonUser.firstname" minlength="3" required #classeTest>
+          <input name="firstname" class="form-control" id="firstname"  [(ngModel)]="personUser.firstname" minlength="3" required #classeTest>
         </div>
-
-        <h3>{{classeTest.className}}</h3>
-
         <div class="col-sm">
           <label for="lastname" class="form-label">last name</label>
-          <input name="lastname" class="form-control" id="lastname" [(ngModel)]="orignalPersonUser.lastname">
+          <input name="lastname" class="form-control" id="lastname" [(ngModel)]="personUser.lastname">
         </div>
     </div>
     <div class="row">
     <div class="col-sm">
         <label for="adress" class="form-label">adress</label>
-        <input name="adress" class="form-control" id="adress" [(ngModel)]="orignalPersonUser.adress">
+        <input name="adress" class="form-control" id="adress" [(ngModel)]="personUser.adress">
       </div>
       <div class="col-sm">
         <label for="city" class="form-label">city</label>
-        <input name="city" class="form-control" id="city" [(ngModel)]="orignalPersonUser.city">
+        <input name="city" class="form-control" id="city" [(ngModel)]="personUser.city">
       </div>
       <div class="col-sm">
         <label for="zipcode" class="form-label">postal/zip code</label>
-        <input name="zipcode" class="form-control" id="zipcode" [(ngModel)]="orignalPersonUser.zipcode">
+        <input name="zipcode" class="form-control" id="zipcode" [(ngModel)]="personUser.zipcode">
       </div>
     </div>
     <div class="row">
       <div class="col-sm">
         <label for="country" class="form-label">country</label>
-        <select class="form-control" id="country" name="country" [(ngModel)]="orignalPersonUser.country">
+        <select class="form-control" id="country" name="country" [(ngModel)]="personUser.country">
           <option>France</option>
           <option>USA</option>
           <option>Italy</option>
@@ -45,12 +39,12 @@
       </div>
       <div class="col-sm">
         <label for="phonenumber" class="form-label">phone number</label>
-        <input name="phonenumber" class="form-control" id="phonenumber" [(ngModel)]="orignalPersonUser.phonenumber">
+        <input name="phonenumber" class="form-control" id="phonenumber" [(ngModel)]="personUser.phonenumber">
       </div>
     </div>
     <div class="mb-3">
         <label for="dateofbirth" class="form-label">date of birth</label>
-        <input name="dateofbirth" class="form-control" id="dateofbirth" [(ngModel)]="orignalPersonUser.dateofbirth">
+        <input name="dateofbirth" class="form-control" id="dateofbirth" [(ngModel)]="personUser.dateofbirth">
     </div>
 
     <div class="d-flex align-items-end flex-column" style="height: 200px;">
